@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- yaml camera info publisher -->
+    <arg name="camera_info_topic00" default="/camera_info_00" />
+    <arg name="camera_info_topic01" default="/camera_info_01" />
+    <arg name="camera_info_topic02" default="/camera_info_02" />
+    <arg name="camera_info_topic03" default="/camera_info_03" />
+    <arg name="camera_info_topic10" default="/camera_info_10" />
+    <arg name="camera_info_topic11" default="/camera_info_11" />
+    <arg name="camera_info_topic20" default="/camera_info_20" />
+    <arg name="camera_info_topic21" default="/camera_info_21" />
+    
+    <arg name="file00" default="$(find camera_info_publisher)/config/hd/gmsl00_calibration.yml" />
+    <arg name="file01" default="$(find camera_info_publisher)/config/hd/gmsl01_calibration.yml" />
+    <arg name="file02" default="$(find camera_info_publisher)/config/hd/gmsl02_calibration.yml" />
+    <arg name="file03" default="$(find camera_info_publisher)/config/hd/gmsl03_calibration.yml" />
+    <arg name="file10" default="$(find camera_info_publisher)/config/hd/gmsl10_calibration.yml" />
+    <arg name="file11" default="$(find camera_info_publisher)/config/hd/gmsl11_calibration.yml" />
+    <arg name="file20" default="$(find camera_info_publisher)/config/hd/gmsl20_calibration.yml" />
+    <arg name="file21" default="$(find camera_info_publisher)/config/hd/gmsl21_calibration.yml" />
+
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_00" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file00)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic00)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_01" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file01)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic01)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_02" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file02)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic02)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_03" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file03)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic03)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_10" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file10)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic10)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_11" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file11)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic11)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_20" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file20)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic20)" />
+    </node>
+    <node pkg="camera_info_publisher" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher_21" output="screen">
+      <param name="camera_calibration_yaml" value="$(arg file21)" /> 
+      <param name="camera_info_topic" value="$(arg camera_info_topic21)" />
+    </node>
+   
+    
+    <!-- camera (parent)to lidar (child) tf static transform (move camera to lidar)-->
+    <arg name="parent_frame_id" default="velodyne"/>
+    <arg name="period_in_ms" default="10"/>
+
+    <!-- tf note: yaw,pitch,roll: ZYX order -->
+    <arg name="x00" default="0.72892175"/>
+    <arg name="y00" default="-0.05673481"/>
+    <arg name="z00" default="-0.11099091"/>
+    <arg name="roll00" default="-1.6718841821632755"/>
+    <arg name="pitch00" default="-0.015351438553294175"/>
+    <arg name="yaw00" default="-1.5813190927007077"/>
+    <arg name="child_frame_id_00" default="camera_0_0"/> <!-- make sure gmsl driver publishes this frame id-->
+
+    <arg name="x01" default="0.71952893"/>
+    <arg name="y01" default="0.18228876"/>
+    <arg name="z01" default="-0.11169658"/>
+    <arg name="roll01" default="-1.665913461853028"/>
+    <arg name="pitch01" default="0.027679270468939563"/>
+    <arg name="yaw01" default="-1.562436226494325"/>
+    <arg name="child_frame_id_01" default="camera_0_1"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x02" default="0.71595247"/>
+    <arg name="y02" default="0.04320704"/>
+    <arg name="z02" default="-0.10889413"/>
+    <arg name="roll02" default="-1.62651830623603"/>
+    <arg name="pitch02" default="0.015196015616014233"/>
+    <arg name="yaw02" default="-1.5876004279927507"/>
+    <arg name="child_frame_id_02" default="camera_0_2"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x03" default="-0.0694195"/>
+    <arg name="y03" default="-0.3498999"/>
+    <arg name="z03" default="-0.24136454"/>
+    <arg name="roll03" default="-1.9680826394276365"/>
+    <arg name="pitch03" default=" 0.0068597437685040796"/>
+    <arg name="yaw03" default="-2.7236373287750535"/>
+    <arg name="child_frame_id_03" default="camera_0_3"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x10" default="-0.16464988"/>
+    <arg name="y10" default="-0.34072625"/>
+    <arg name="z10" default="-0.24120047"/>
+    <arg name="roll10" default="-1.9809370038739647"/>
+    <arg name="pitch10" default="-0.014117555829258957"/>
+    <arg name="yaw10" default="2.523449386581348"/>
+    <arg name="child_frame_id_10" default="camera_1_0"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x11" default="-0.08410137"/>
+    <arg name="y11" default="0.41974232"/>
+    <arg name="z11" default="-0.23364842"/>
+    <arg name="roll11" default="-1.9408021713223527"/>
+    <arg name="pitch11" default="-0.019320273414187825"/>
+    <arg name="yaw11" default="-0.4155467189654913"/>
+    <arg name="child_frame_id_11" default="camera_1_1"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x20" default="-0.16035341"/>
+    <arg name="y20" default="0.40248961"/>
+    <arg name="z20" default="-0.2399301"/>
+    <arg name="roll20" default="-1.9596422734085877"/>
+    <arg name="pitch20" default="-0.002655667754141207"/>
+    <arg name="yaw20" default="0.6582670549283184"/>
+    <arg name="child_frame_id_20" default="camera_2_0"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <arg name="x21" default="-0.36160303"/>
+    <arg name="y21" default="0.02466039"/>
+    <arg name="z21" default="-0.15475114"/>
+    <arg name="roll21" default="-1.9350408386474154"/>
+    <arg name="pitch21" default="-0.002165312435191361"/>
+    <arg name="yaw21" default="1.570515680985396"/>
+    <arg name="child_frame_id_21" default="camera_2_1"/> <!-- make sure gmsl driver publishes this frame id-->
+  	
+    <!-- publishing fix transformation -->
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl00" args="$(arg x00) $(arg y00) $(arg z00) $(arg yaw00) $(arg pitch00) $(arg roll00) $(arg parent_frame_id) $(arg child_frame_id_00) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl01" args="$(arg x01) $(arg y01) $(arg z01) $(arg yaw01) $(arg pitch01) $(arg roll01) $(arg parent_frame_id) $(arg child_frame_id_01) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl02" args="$(arg x02) $(arg y02) $(arg z02) $(arg yaw02) $(arg pitch02) $(arg roll02) $(arg parent_frame_id) $(arg child_frame_id_02) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl03" args="$(arg x03) $(arg y03) $(arg z03) $(arg yaw03) $(arg pitch03) $(arg roll03) $(arg parent_frame_id) $(arg child_frame_id_03) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl10" args="$(arg x10) $(arg y10) $(arg z10) $(arg yaw10) $(arg pitch10) $(arg roll10) $(arg parent_frame_id) $(arg child_frame_id_10) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl11" args="$(arg x11) $(arg y11) $(arg z11) $(arg yaw11) $(arg pitch11) $(arg roll11) $(arg parent_frame_id) $(arg child_frame_id_11) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl20" args="$(arg x20) $(arg y20) $(arg z20) $(arg yaw20) $(arg pitch20) $(arg roll20) $(arg parent_frame_id) $(arg child_frame_id_20) $(arg period_in_ms)"/>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_gmsl21" args="$(arg x21) $(arg y21) $(arg z21) $(arg yaw21) $(arg pitch21) $(arg roll21) $(arg parent_frame_id) $(arg child_frame_id_21) $(arg period_in_ms)"/>
+</launch>
+
+
