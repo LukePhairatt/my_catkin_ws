@@ -1,0 +1,24 @@
+image_topics:
+  size: 2
+  name1: gmsl_image_raw_0_0
+  name2: gmsl_image_raw_0_1 
+camera_infos:
+  size: 2
+  name1: gmsl_0_0
+  name2: gmsl_0_1
+param_name: [ 0.546, -0.546, -0.546,  0.546,  0.724, 0.724]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

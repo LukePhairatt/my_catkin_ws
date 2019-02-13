@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/devel
+
+Name: nodelet_rosbag
+Description: Description of nodelet_rosbag
+Version: 0.1.0
+Cflags: -I/home/punnu/catkin_ws/devel/include -I/home/punnu/catkin_ws/src/nodelet_rosbag/include
+Libs: -L/home/punnu/catkin_ws/devel/lib -lnodelet_rosbag
+Requires: nodelet rosbag_storage roscpp actionlib message_generation actionlib_msgs topic_tools

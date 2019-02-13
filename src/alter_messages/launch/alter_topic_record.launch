@@ -1,0 +1,72 @@
+<launch>
+  <arg name="path" default="/home/punnu/bagfile/GuilfordSurrey/" />
+  <arg name="file_1" default="GFD_2018-09-05-12-19-47-imu-top.bag" />
+  <arg name="file_2" default="GFD_2018-09-05-12-56-32-imu-top.bag" />
+  <arg name="file_3" default="GFD_2018-09-05-14-36-13-imu-top.bag" />
+  <!-- play bag with a topic remap -->
+  <node pkg="rosbag" type="play" name="robag_play" output="screen" args="--clock $(arg path)$(arg file_3) 
+       	/gmsl_image_raw_0_0:=/gmsl_image_raw_0_0_x
+		/gmsl_image_raw_0_1:=/gmsl_image_raw_0_1_x
+        /gmsl_image_raw_0_2:=/gmsl_image_raw_0_2_x
+		/gmsl_image_raw_0_3:=/gmsl_image_raw_0_3_x
+        /gmsl_image_raw_1_0:=/gmsl_image_raw_1_0_x
+		/gmsl_image_raw_1_1:=/gmsl_image_raw_1_1_x
+        /gmsl_image_raw_1_2:=/gmsl_image_raw_1_2_x
+		/gmsl_image_raw_1_3:=/gmsl_image_raw_1_3_x"
+  />
+
+  <!-- this node will modify camera frame_id name -->
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_0" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_0_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_0_0" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_0" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_1" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_1_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_0_1" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_1" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_2" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_2_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_0_2" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_2" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_3" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_3_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_0_3" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_3" type="str" />
+  </node>
+
+
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_4" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_0_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_1_0" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_0" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_5" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_1_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_1_1" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_1" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_6" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_2_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_1_2" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_2" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_7" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_3_x" type="str" />
+    <param name="pub_topic" value="/gmsl_image_raw_1_3" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_3" type="str" />
+  </node>
+ 
+  <!-- record to a bag file -->
+  <include file="$(find record_ros)/launch/record_ros.launch">
+	<arg name="path_save"   default="~/bagfile"/>	  
+	<arg name="topic"  	default="/imu/data /imu/mag /velocity /velodyne_points 
+								 /gmsl_image_raw_0_0 /gmsl_image_raw_0_1 /gmsl_image_raw_0_2 /gmsl_image_raw_0_3 
+								 /gmsl_image_raw_1_0 /gmsl_image_raw_1_1 /gmsl_image_raw_1_2 /gmsl_image_raw_1_3"/> 
+	<arg name="file_name"  	default="GFD"/>
+  </include>
+
+
+</launch>

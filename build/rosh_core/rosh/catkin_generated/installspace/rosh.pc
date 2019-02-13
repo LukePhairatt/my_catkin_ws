@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/install
+
+Name: rosh
+Description: Description of rosh
+Version: 1.0.9
+Cflags: 
+Libs: -L/home/punnu/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/install
+
+Name: sdcan_interface
+Description: Description of sdcan_interface
+Version: 1.8.0
+Cflags: 
+Libs: -L/home/punnu/catkin_ws/install/lib 
+Requires: sensor_msgs geometry_msgs can_msgs

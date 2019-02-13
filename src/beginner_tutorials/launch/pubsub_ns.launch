@@ -1,0 +1,9 @@
+<launch>
+  <group ns="wg2">
+    <node pkg="beginner_tutorials" type="talker" name="talker_node" respawn="false" output="screen">
+      <param name="width" value="256"/> 
+      <param name="height" value="248"/>
+
+    </node>
+  </group>
+</launch>

@@ -1,0 +1,6 @@
+set(robotnik_pp_planner_SETUP_PY_VERSION "0.1.0")
+set(robotnik_pp_planner_SETUP_PY_SCRIPTS "")
+set(robotnik_pp_planner_SETUP_PY_PACKAGES "robotnik_pp_planner")
+set(robotnik_pp_planner_SETUP_PY_PACKAGE_DIRS "scripts/robotnik_pp_planner")
+set(robotnik_pp_planner_SETUP_PY_MODULES "")
+set(robotnik_pp_planner_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/install
+
+Name: cvssp_twizzy
+Description: Description of cvssp_twizzy
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/punnu/catkin_ws/install/lib 
+Requires: roscpp rospy std_msgs tf cvssp_segnet cvssp_tools

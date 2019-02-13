@@ -1,0 +1,18 @@
+<launch>
+
+  
+  <arg name="run_rviz" default="true" />
+  <arg name="rvizconfig" default="$(find cvssp_twizzy)/rviz/urdf.rviz" />
+  
+  <arg name="model" default="$(find cvssp_twizzy)/urdf/twizzy.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" if="$(arg run_rviz)" />
+
+  <!--
+  <include file="$(find image_processor)/launch/image_rectifier_gmsl_hd.launch" />
+  -->
+
+</launch>

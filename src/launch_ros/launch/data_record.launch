@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Relay lower rate map for rviz, input:ndt_map, output:ndt_map_relay-->
+  <node pkg="topic_tools"
+        type="throttle"
+        name="map_throttler"
+        args="messages /ndt_map 1.0 /ndt_map_relay"                      
+        output="screen" />
+
+  <!-- record bag record -->
+  <include file="$(find record_ros)/launch/record_ros.launch" />
+
+</launch>
+
+

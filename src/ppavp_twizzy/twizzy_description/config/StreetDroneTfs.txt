@@ -1,0 +1,10 @@
+rosrun tf static_transform_publisher 0.71952893 0.18228876 -0.11169658 -1.66591346 0.02767927 -1.56243623 lidar camera_0_0 100
+rosrun tf static_transform_publisher 0.72892175 -0.05673481 -0.11099091 -1.67188418 -0.01535144 -1.58131909 lidar camera_0_1 100
+rosrun tf static_transform_publisher 0.71595247 0.04320704 -0.10889413 -1.62651831 0.01519602 -1.58760043 lidar camera_0_2 100 
+rosrun tf static_transform_publisher -0.0694195 -0.3498999 -0.24136454 -1.96808264 0.00685974 -2.72363733 lidar camera_0_3 100
+rosrun tf static_transform_publisher -0.16464988 -0.34072625 -0.24120047 -1.98093700 -0.01411756 2.52344939 lidar camera_1_0 100
+rosrun tf static_transform_publisher -0.16035341 0.40248961 -0.2399301 -1.95964227 -0.00265567 0.65826705 lidar camera_1_1 100
+rosrun tf static_transform_publisher -0.08410137 0.41974232 -0.23364842 -1.94080217 -0.01932027 -0.41554672 lidar camera_1_2 100
+rosrun tf static_transform_publisher -0.36160303 0.02466039 -0.15475114 -1.93504084 -0.00216531 1.57051568 lidar camera_1_3 100
+rosrun tf static_transform_publisher -0.019 0.052 -0.035 0.000 0.000 0.000 lidar imu 100
+rosrun tf static_transform_publisher 0.0 0.0 1.5 0.0 0.0 0.0 odom lidar 100

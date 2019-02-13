@@ -1,0 +1,19 @@
+<launch>
+  <rosparam param="cam_topics"> ['gmsl_image_raw_0_0', 'gmsl_image_raw_0_1'] </rosparam>
+  <rosparam param="cam_infos"> ['camera_info_00', 'camera_info_01'] </rosparam>
+
+  <!-- Load yaml camera infos and topics -->
+  <rosparam file="$(find beginner_tutorials)/scripts/sub_camera_topics.yml" command="load" />
+
+  <node pkg="beginner_tutorials" type="talker" name="talker_node" respawn="false" output="screen">
+    <param name="width"  value="256" type="int"/> 
+    <param name="height" value="248" type="int"/>
+    <param name="type_ab" value="ar0231-rxxx" type="str" />
+    <param name="type_cd" value="ar0231-rxxx" type="str" />
+    <param name="type_ef" value="ar0231-rxxx" type="str" />
+    <param name="selector_mask" value="111100111111" type="str" />
+    <param name="cross_csi_sync" value="1" type="str" />
+    <param name="fifo_size" value="1" type="str" />
+    <param name="slave" value="1" type="str" />
+  </node>
+</launch>

@@ -1,0 +1,44 @@
+<launch>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_0" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_0" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_0_0" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_0" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_1" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_1" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_0_1" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_1" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_2" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_2" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_0_2" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_2" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_3" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_0_3" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_0_3" type="str" />
+    <param name="mod_frame_id" value="gmsl_0_3" type="str" />
+  </node>
+
+
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_4" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_0" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_1_0" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_0" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_5" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_1" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_1_1" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_1" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_6" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_2" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_1_2" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_2" type="str" />
+  </node>
+  <node pkg="alter_messages" type="msg_alteration" name="alteration_node_7" respawn="false" output="screen">
+    <param name="sub_topic" value="/gmsl_image_raw_1_3" type="str" />
+    <param name="pub_topic" value="/gmsl_image_alt_1_3" type="str" />
+    <param name="mod_frame_id" value="gmsl_1_3" type="str" />
+  </node>
+</launch>

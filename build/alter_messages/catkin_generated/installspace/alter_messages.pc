@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/install
+
+Name: alter_messages
+Description: Description of alter_messages
+Version: 0.0.0
+Cflags: -I/home/punnu/catkin_ws/install/include
+Libs: -L/home/punnu/catkin_ws/install/lib 
+Requires: 

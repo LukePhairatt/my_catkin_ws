@@ -1,0 +1,35 @@
+<launch>
+  <!-- Autoware set tf velodyne and base link yaml-->
+  <rosparam file="$(find runtime_manager)/scripts/basetolidar.yaml" command="load" />
+
+  <!-- Publish tf frame -->
+  <include file="$(find runtime_manager)/scripts/setup_tf_my.launch">
+    <arg name="x" value="0.0" />
+    <arg name="y" value="0.0" />
+    <arg name="z" value="0.0" />
+    <arg name="yaw" value="0.0" />
+    <arg name="pitch" value="0.0" />
+    <arg name="roll" value="0.0" />
+    <arg name="frame_id" value="/base_link" />
+    <arg name="child_frame_id" value="/velodyne" />
+    <arg name="period_in_ms" value="10"/>
+  </include>
+  
+  
+  <!-- Autoware vehicle urdf model -->
+  <include file="$(find model_publisher)/launch/vehicle_model.launch" />
+
+
+  <!-- Autoware Pointcloud Filter: RamdomFilter, input:velodyne_points, output:points_raw -->
+  <include file="$(find points_downsampler)/launch/points_downsample.launch" >
+	<arg name="node_name" default="random_filter" />
+    <arg name="points_topic" default="velodyne_points" />
+  </include>
+
+  
+  <!-- Autoware Mapping: NDT, input:points_raw, output:ndt_map -->
+  <include file="$(find lidar_localizer)/launch/ndt_mapping.launch" />
+
+</launch>
+
+
