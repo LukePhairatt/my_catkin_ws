@@ -1,0 +1,8 @@
+prefix=/home/punnu/catkin_ws/devel
+
+Name: twist_vehicle_cmd
+Description: Description of twist_vehicle_cmd
+Version: 1.8.0
+Cflags: 
+Libs: -L/home/punnu/catkin_ws/devel/lib 
+Requires: sensor_msgs geometry_msgs autoware_msgs

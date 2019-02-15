@@ -48,21 +48,21 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface" TYPE EXECUTABLE FILES "/home/punnu/catkin_ws/devel/lib/sdcan_interface/sdcan_interface")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface" TYPE EXECUTABLE FILES "/home/punnu/catkin_ws/devel/lib/sdcan_interface/sdcan_sender")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender"
          OLD_RPATH "/opt/ros/kinetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_interface")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sdcan_interface/sdcan_sender")
     endif()
   endif()
 endif()

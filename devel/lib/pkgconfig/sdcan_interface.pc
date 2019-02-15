@@ -5,4 +5,4 @@ Description: Description of sdcan_interface
 Version: 1.8.0
 Cflags: 
 Libs: -L/home/punnu/catkin_ws/devel/lib 
-Requires: sensor_msgs geometry_msgs can_msgs
+Requires: sensor_msgs geometry_msgs can_msgs autoware_msgs

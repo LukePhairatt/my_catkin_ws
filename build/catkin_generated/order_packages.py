@@ -2,4 +2,4 @@
 source_root_dir = "/home/punnu/catkin_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/punnu/catkin_ws/devel;/home/punnu/Autoware/ros/devel;/opt/ros/kinetic".split(';') if "/home/punnu/catkin_ws/devel;/home/punnu/Autoware/ros/devel;/opt/ros/kinetic" != "" else []

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.5.1, 2019-02-13T13:42:01. -->
+<!-- Written by QtCreator 4.5.1, 2019-02-15T17:50:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -102,24 +102,11 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">ARCHDIR=Linux64</value>
-     <value type="QString">CMAKE_PREFIX_PATH=/home/punnu/catkin_ws/devel:/opt/ros/kinetic</value>
-     <value type="QString">EUSDIR=/opt/ros/kinetic/share/euslisp/jskeus/eus/</value>
-     <value type="QString">HUSKY_MAG_CONFIG=/home/punnu/catkin_ws/src/husky/husky_bringup/config/mag_config_default.yaml</value>
-     <value type="QString">LD_LIBRARY_PATH=/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/home/punnu/catkin_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib</value>
-     <value type="QString">PATH=/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/home/punnu/catkin_ws/devel/bin:/opt/ros/kinetic/bin:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/home/punnu/bin:/home/punnu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin</value>
-     <value type="QString">PKG_CONFIG_PATH=/home/punnu/catkin_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig</value>
-     <value type="QString">PWD=/home/punnu/catkin_ws</value>
-     <value type="QString">PYTHONPATH=/home/punnu/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages</value>
+     <value type="QString">LD_LIBRARY_PATH=/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/home/punnu/catkin_ws/devel/lib:/home/punnu/Autoware/ros/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/usr/local/cuda-9.0/lib64:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/lib:/usr/local/cuda/lib64:/usr/local/cuda/lib64:/usr/local/cudnn/lib64</value>
+     <value type="QString">OLDPWD</value>
+     <value type="QString">PATH=/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/home/punnu/catkin_ws/devel/bin:/opt/ros/kinetic/bin:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/usr/local/cuda-9.0/bin:/home/punnu/.nvm/versions/node/v8.10.0/bin:/opt/ros/kinetic/share/euslisp/jskeus/eus//Linux64/bin:/usr/local/cuda/bin:/usr/local/cuda/bin:/home/punnu/bin:/home/punnu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin</value>
      <value type="QString">QTDIR</value>
-     <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/punnu/catkin_ws/devel/share/common-lisp</value>
-     <value type="QString">ROS_DISTRO=kinetic</value>
-     <value type="QString">ROS_ETC_DIR=/opt/ros/kinetic/etc/ros</value>
-     <value type="QString">ROS_MASTER_URI=http://localhost:11311</value>
-     <value type="QString">ROS_PACKAGE_PATH=/home/punnu/catkin_ws/src:/opt/ros/kinetic/share</value>
-     <value type="QString">ROS_ROOT=/opt/ros/kinetic/share/ros</value>
-     <value type="QString">ROS_VERSION=1</value>
-     <value type="QString">SHLVL=2</value>
+     <value type="QString">SHLVL=3</value>
      <value type="QString">TERM=xterm</value>
      <value type="QString">_=/usr/bin/env</value>
     </valuelist>

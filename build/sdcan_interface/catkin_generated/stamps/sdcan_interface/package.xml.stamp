@@ -2,7 +2,12 @@
 <package>
   <name>sdcan_interface</name>
   <version>1.8.0</version>
-  <description>The sdcan_interface package</description>
+  <description>
+      The sdcan_interface package include CANBus io message for Street Drone 1.
+      Interface includes vehicle motion control command output as well as reading vehicle status and
+  	  other canbus sensors connected on the vehicle
+       
+  </description>
 
   <maintainer email="punnu@parkopedia.com">PunnuPhairatt</maintainer>
 
@@ -13,11 +18,13 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>can_msgs</build_depend>
+  <build_depend>autoware_msgs</build_depend>
 
   <run_depend>roscpp</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>can_msgs</run_depend>
+  <run_depend>autoware_msgs</run_depend>
 
   <export></export>
 </package>
