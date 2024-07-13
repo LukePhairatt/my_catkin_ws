@@ -1,8 +1,0 @@
-prefix=/home/punnu/catkin_ws/devel
-
-Name: socketcan_bridge
-Description: Description of socketcan_bridge
-Version: 0.7.6
-Cflags: -I/home/punnu/catkin_ws/src/ros_canopen/socketcan_bridge/include
-Libs: -L/home/punnu/catkin_ws/devel/lib -lsocketcan_to_topic -ltopic_to_socketcan
-Requires: can_msgs roscpp socketcan_interface

@@ -1,8 +1,0 @@
-prefix=/home/punnu/catkin_ws/devel
-
-Name: roshlaunch
-Description: Description of roshlaunch
-Version: 1.0.9
-Cflags: 
-Libs: -L/home/punnu/catkin_ws/devel/lib 
-Requires: 

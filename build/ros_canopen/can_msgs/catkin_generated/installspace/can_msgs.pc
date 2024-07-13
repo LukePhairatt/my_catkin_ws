@@ -1,8 +1,0 @@
-prefix=/home/punnu/catkin_ws/install
-
-Name: can_msgs
-Description: Description of can_msgs
-Version: 0.7.6
-Cflags: -I/home/punnu/catkin_ws/install/include
-Libs: -L/home/punnu/catkin_ws/install/lib 
-Requires: message_runtime std_msgs

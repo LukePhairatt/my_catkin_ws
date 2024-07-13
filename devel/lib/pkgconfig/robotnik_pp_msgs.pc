@@ -1,8 +1,0 @@
-prefix=/home/punnu/catkin_ws/devel
-
-Name: robotnik_pp_msgs
-Description: Description of robotnik_pp_msgs
-Version: 0.1.0
-Cflags: -I/home/punnu/catkin_ws/devel/include
-Libs: -L/home/punnu/catkin_ws/devel/lib 
-Requires: roscpp actionlib roscpp std_msgs actionlib_msgs geometry_msgs

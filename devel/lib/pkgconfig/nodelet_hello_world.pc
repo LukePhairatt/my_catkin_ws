@@ -1,8 +1,0 @@
-prefix=/home/punnu/catkin_ws/devel
-
-Name: nodelet_hello_world
-Description: Description of nodelet_hello_world
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/punnu/catkin_ws/devel/lib -lnodelet_hello_world
-Requires: nodelet roscpp std_msgs
